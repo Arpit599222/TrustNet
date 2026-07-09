@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { api } from '../services/api.js';
+// import { api } from '../services/api.js';
 
 interface User {
   id: string;
@@ -27,8 +27,8 @@ export const useAuth = () => {
   return context;
 };
 
-import { signInWithPopup } from 'firebase/auth';
-import { auth, googleProvider } from '../config/firebase.js';
+// import { signInWithPopup } from 'firebase/auth';
+// import { auth, googleProvider } from '../config/firebase.js';
 
 export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [user, setUser] = useState<User | null>(null);
@@ -41,6 +41,17 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   // ponytail: fetch user profile on startup if token exists in storage
   useEffect(() => {
     const fetchUser = async () => {
+      // TODO: Restore backend API calls for production deployment.
+      const isAuth = localStorage.getItem('isAuthenticated');
+      if (!isAuth) {
+        setLoading(false);
+        return;
+      }
+      
+      // Temporary mock session
+      setUser({ id: 'mock-id', name: 'UI Prototype User', email: 'prototype@trustnet.local', createdAt: new Date().toISOString() });
+      setLoading(false);
+      /*
       const token = localStorage.getItem('trustnet_token');
       if (!token) {
         setLoading(false);
@@ -59,19 +70,25 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       } finally {
         setLoading(false);
       }
+      */
     };
     fetchUser();
   }, []);
 
-  const login = async (email: string, password: string) => {
+  const login = async (email: string, _password: string) => {
     setError(null);
     try {
+      // TODO: Restore backend API calls for production deployment.
+      localStorage.setItem('isAuthenticated', 'true');
+      setUser({ id: 'mock-id', name: 'UI Prototype User', email, createdAt: new Date().toISOString() });
+      /*
       const res = await api.post('/auth/login', { email, password });
       if (res.data.success) {
         const { token, user: userData } = res.data.data;
         localStorage.setItem('trustnet_token', token);
         setUser(userData);
       }
+      */
     } catch (err: any) {
       const errMsg = err.response?.data?.error || 'Failed to sign in. Please try again.';
       setError(errMsg);
@@ -79,15 +96,20 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     }
   };
 
-  const signup = async (name: string, email: string, password: string) => {
+  const signup = async (name: string, email: string, _password: string) => {
     setError(null);
     try {
+      // TODO: Restore backend API calls for production deployment.
+      localStorage.setItem('isAuthenticated', 'true');
+      setUser({ id: 'mock-id', name, email, createdAt: new Date().toISOString() });
+      /*
       const res = await api.post('/auth/signup', { name, email, password });
       if (res.data.success) {
         const { token, user: userData } = res.data.data;
         localStorage.setItem('trustnet_token', token);
         setUser(userData);
       }
+      */
     } catch (err: any) {
       const errMsg = err.response?.data?.error || 'Failed to create account. Please try again.';
       setError(errMsg);
@@ -98,6 +120,10 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const loginWithGoogle = async () => {
     setError(null);
     try {
+      // TODO: Restore backend API calls for production deployment.
+      localStorage.setItem('isAuthenticated', 'true');
+      setUser({ id: 'mock-id', name: 'Google Prototype User', email: 'google@trustnet.local', createdAt: new Date().toISOString() });
+      /*
       const result = await signInWithPopup(auth, googleProvider);
       const user = result.user;
       
@@ -112,6 +138,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         localStorage.setItem('trustnet_token', token);
         setUser(userData);
       }
+      */
     } catch (err: any) {
       console.error("Google Auth error:", err);
       const errMsg = err.response?.data?.error || err.message || 'Failed to sign in with Google. Please try again.';
@@ -122,12 +149,14 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const logout = async () => {
     try {
+      // TODO: Restore backend API calls for production deployment.
       // Best-effort backend notify
-      await api.post('/auth/logout');
+      // await api.post('/auth/logout');
     } catch (err) {
       console.warn('Backend logout notification failed:', err);
     } finally {
-      localStorage.removeItem('trustnet_token');
+      localStorage.removeItem('isAuthenticated');
+      // localStorage.removeItem('trustnet_token');
       setUser(null);
     }
   };

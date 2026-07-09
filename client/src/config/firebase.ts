@@ -1,6 +1,7 @@
-import { initializeApp } from "firebase/app";
-import { getAuth, GoogleAuthProvider } from "firebase/auth";
+// import { initializeApp } from "firebase/app";
+// import { getAuth, GoogleAuthProvider } from "firebase/auth";
 
+/*
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
   authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
@@ -10,7 +11,12 @@ const firebaseConfig = {
   appId: import.meta.env.VITE_FIREBASE_APP_ID,
   measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
 };
+*/
 
-const app = initializeApp(firebaseConfig);
-export const auth = getAuth(app);
-export const googleProvider = new GoogleAuthProvider();
+// TODO: Re-enable Firebase initialization for production deployment.
+// const app = initializeApp(firebaseConfig);
+// export const auth = getAuth(app);
+// export const googleProvider = new GoogleAuthProvider();
+
+export const auth = {} as any;
+export const googleProvider = {} as any;
