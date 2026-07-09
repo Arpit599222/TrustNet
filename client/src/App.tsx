@@ -9,7 +9,6 @@ import { Loader2 } from 'lucide-react';
 
 // Eagerly loaded public pages
 import LandingPage from './pages/LandingPage.js';
-
 // Lazy loaded protected pages
 const DashboardPage = React.lazy(() => import('./pages/DashboardPage.js'));
 const ScannerPage = React.lazy(() => import('./pages/ScannerPage.js'));
