@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#07080B"/>
+      <stop offset="100%" stop-color="#1E3A8A"/>
+    </linearGradient>
+    <linearGradient id="shield" x1="80" y1="160" x2="80" y2="470" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <!-- Decorative circles -->
+  <circle cx="1050" cy="100" r="200" fill="rgba(37,99,235,0.12)"/>
+  <circle cx="150" cy="550" r="160" fill="rgba(5,150,105,0.08)"/>
+  <!-- Shield icon -->
+  <g transform="translate(100, 160)">
+    <path d="M80 0L0 40v60c0 37 13 72 40 90 12 8 26 12 40 12s28-4 40-12c27-18 40-53 40-90V40L80 0z" fill="url(#shield)" opacity="0.9"/>
+    <path d="M48 85l28 28 40-48" stroke="#fff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+  <!-- Text -->
+  <text x="320" y="260" font-family="Outfit, system-ui, sans-serif" font-weight="900" font-size="72" fill="#FFFFFF" letter-spacing="-1">
+    TrustNet
+  </text>
+  <text x="320" y="330" font-family="Outfit, system-ui, sans-serif" font-weight="400" font-size="30" fill="rgba(255,255,255,0.7)" letter-spacing="0.5">
+    Verify Before You Click, Share, or Pay.
+  </text>
+  <text x="320" y="380" font-family="Mukta, system-ui, sans-serif" font-weight="400" font-size="24" fill="rgba(255,255,255,0.45)">
+    Phishing detection · Scam SMS · Fake news · Deepfake analysis
+  </text>
+  <text x="320" y="430" font-family="Outfit, system-ui, sans-serif" font-weight="600" font-size="22" fill="#34D399">
+    Free · Bilingual · Privacy-first · Made in India 🇮🇳
+  </text>
+</svg>

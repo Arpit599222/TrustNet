@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div align="center">
   <img src="https://via.placeholder.com/150/050505/FFFFFF?text=TrustNet+AI" alt="TrustNet AI Logo" width="150" />
 
@@ -306,3 +307,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
   <p>⭐ If you like this project, please consider giving it a star.</p>
   <b>Building a Safer Digital Society with AI.</b>
 </div>
+=======
+# TrustNet
+>>>>>>> 93c35415c2f03986a522e9e2f23741b9f13e5ec9

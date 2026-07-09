@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+
+@import "tailwindcss";
+
+/* Enable class-based dark mode so the manual toggle works (paired with ThemeProvider) */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* Matte Black Cybersecurity Theme Tokens */
+  --color-matte-bg: #050505;
+  --color-matte-secondary: #0B0B0B;
+  --color-matte-card: #101010;
+  --color-matte-elevated: #171717;
+  --color-matte-border: #232323;
+  --color-matte-text: #FFFFFF;
+  --color-matte-subtext: #A3A3A3;
+  --color-matte-accent: #2563EB;
+  --color-matte-success: #22C55E;
+  --color-matte-warning: #F59E0B;
+  --color-matte-danger: #EF4444;
+
+  /* Semantic convenience tokens */
+  --font-sans: 'Inter', 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+  html.dark {
+    color-scheme: dark;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #FBEFEF;
+    color: #0F172A;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  /* Force Dark Theme default or apply Matte Black to dark mode */
+  html.dark body {
+    background-color: var(--color-matte-bg);
+    color: var(--color-matte-text);
+  }
+
+  /* Devanagari rendering helper */
+  :lang(hi) {
+    font-family: 'Inter', 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Soft ambient mesh-gradient backdrop - Removed Purple/Blue Glow */
+.trust-backdrop {
+  position: relative;
+  isolation: isolate;
+}
+.trust-backdrop::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(60rem 60rem at 85% -10%, rgba(197, 179, 211, 0.15), transparent 60%);
+  pointer-events: none;
+}
+html.dark .trust-backdrop::before {
+  background: none; /* Pure matte black */
+}
+
+/* ============================================================
+   Light Theme Palette & Matte Black Enterprise Styling
+   ============================================================ */
+
+/* Frosted glass surface — nav, footers */
+.skeuo-glass {
+  background: rgba(255, 226, 226, 0.72);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid #F5CBCB;
+}
+html.dark .skeuo-glass {
+  background: rgba(11, 11, 11, 0.72); /* matte-secondary */
+  border-color: var(--color-matte-border);
+}
+
+/* Elevated card */
+.skeuo-card {
+  background: #FFE2E2;
+  border: 1px solid #F5CBCB;
+  border-radius: 24px;
+  box-shadow: 0 4px 20px rgba(197, 179, 211, 0.15);
+}
+html.dark .skeuo-card {
+  background: var(--color-matte-card);
+  border-color: var(--color-matte-border);
+  border-radius: 24px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Inset input surface */
+.skeuo-input {
+  background: #FBEFEF;
+  border: 1px solid #F5CBCB;
+  color: #0F172A;
+  transition: all 0.2s ease;
+}
+.skeuo-input::placeholder { color: #8F8F8F; }
+.skeuo-input:focus {
+  background: #FFE2E2;
+  border-color: #C5B3D3;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+}
+html.dark .skeuo-input {
+  background: var(--color-matte-secondary);
+  border-color: var(--color-matte-border);
+  color: var(--color-matte-text);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+html.dark .skeuo-input::placeholder { color: var(--color-matte-subtext); }
+html.dark .skeuo-input:focus {
+  background: var(--color-matte-card);
+  border-color: var(--color-matte-accent);
+}
+
+/* Primary action — matte black or accent */
+.skeuo-button-primary {
+  background: #C5B3D3;
+  border: 1px solid transparent;
+  color: #0F172A;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+.skeuo-button-primary:hover {
+  background: #b5a0c5;
+  box-shadow: 0 0 10px rgba(197, 179, 211, 0.4);
+}
+html.dark .skeuo-button-primary {
+  background: var(--color-matte-accent);
+  color: #FFFFFF;
+}
+html.dark .skeuo-button-primary:hover {
+  background: #1D4ED8;
+  box-shadow: 0 0 10px rgba(37, 99, 235, 0.2);
+}
+
+/* "Verified safe" accent variant — emerald */
+.skeuo-button-verified {
+  background: var(--color-matte-success);
+  border: 1px solid transparent;
+  color: #FFFFFF;
+  transition: all 0.2s ease;
+}
+.skeuo-button-verified:hover {
+  background: #16A34A;
+}
+
+/* Secondary action — neutral */
+.skeuo-button-secondary {
+  background: #FFE2E2;
+  border: 1px solid #F5CBCB;
+  color: #1E293B;
+  transition: all 0.2s ease;
+}
+html.dark .skeuo-button-secondary {
+  background: var(--color-matte-card);
+  border-color: var(--color-matte-border);
+  color: var(--color-matte-text);
+}
+html.dark .skeuo-button-secondary:hover {
+  background: var(--color-matte-elevated);
+}
+
+/* Icon / pill button */
+.skeuo-icon-btn {
+  background: #FFE2E2;
+  border: 1px solid #F5CBCB;
+  transition: all 0.2s ease;
+}
+html.dark .skeuo-icon-btn {
+  background: var(--color-matte-card);
+  border-color: var(--color-matte-border);
+}
+html.dark .skeuo-icon-btn:hover {
+  background: var(--color-matte-elevated);
+}
+
+/* Subtle elevated surface */
+.skeuo-tile {
+  background: #FFE2E2;
+  border: 1px solid #F5CBCB;
+}
+html.dark .skeuo-tile {
+  background: var(--color-matte-elevated);
+  border-color: var(--color-matte-border);
+  border-radius: 24px;
+}
+
+/* Custom scrollbar — quiet, premium */
+.trust-scroll::-webkit-scrollbar { width: 6px; height: 6px; }
+.trust-scroll::-webkit-scrollbar-thumb {
+  background: #F5CBCB;
+  border-radius: 999px;
+}
+.trust-scroll::-webkit-scrollbar-thumb:hover {
+  background: #C5B3D3;
+}
+html.dark .trust-scroll::-webkit-scrollbar-thumb {
+  background: var(--color-matte-border);
+}
+html.dark .trust-scroll::-webkit-scrollbar-thumb:hover {
+  background: var(--color-matte-subtext);
+}
