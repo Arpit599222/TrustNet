@@ -3,7 +3,12 @@ import cors from 'cors';
 import helmet from 'helmet';
 import rateLimit from 'express-rate-limit';
 import dotenv from 'dotenv';
+import path from 'path';
+import { fileURLToPath } from 'url';
 import authRoutes from './routes/authRoutes.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 dotenv.config();
 
@@ -50,10 +55,20 @@ app.use('/api/auth/signup', authLimiter);
 // 5. Mount API Routes
 app.use('/api/auth', authRoutes);
 
-// Root diagnostic route
-app.get('/', (_req, res) => {
+// API diagnostic route
+app.get('/api/health', (_req, res) => {
   res.json({ status: 'active', platform: 'TrustNet Trust API', timestamp: new Date().toISOString() });
 });
+
+// Serve frontend in production
+if (process.env.NODE_ENV === 'production') {
+  const clientBuildPath = path.join(__dirname, '../../client/dist');
+  app.use(express.static(clientBuildPath));
+  
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(clientBuildPath, 'index.html'));
+  });
+}
 
 // 6. Global Fallback Error Handler Middleware
 app.use((err: any, _req: express.Request, res: express.Response, _next: express.NextFunction) => {
@@ -61,12 +76,8 @@ app.use((err: any, _req: express.Request, res: express.Response, _next: express.
   res.status(500).json({ success: false, error: 'Something went wrong on the server.' });
 });
 
-// Start listening if not in a serverless environment
-if (process.env.NODE_ENV !== 'production' && !process.env.VERCEL) {
-  app.listen(PORT, () => {
-    console.log(`TrustNet Server running in local mode on port ${PORT}`);
-    console.log(`Accepting CORS requests from: ${CLIENT_URL}`);
-  });
-}
-
-export default app;
+// Start listening
+app.listen(PORT, () => {
+  console.log(`TrustNet Server running in local mode on port ${PORT}`);
+  console.log(`Accepting CORS requests from: ${CLIENT_URL}`);
+});
