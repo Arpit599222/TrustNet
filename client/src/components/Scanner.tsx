@@ -13,7 +13,7 @@ import {
 } from 'lucide-react';
 import { analyze, SAMPLE_INPUTS } from '../utils/scannerLogic';
 import type { ScannerMode, RiskLevel } from '../utils/scannerLogic';
-import { useLanguage } from '../App';
+import { useLanguage } from '../context/LanguageContext.js';
 
 const MODES: { id: ScannerMode; icon: typeof Globe; key: string }[] = [
   { id: 'url', icon: Globe, key: 'mode.url' },

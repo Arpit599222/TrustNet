@@ -2,6 +2,7 @@ import React, { useState, useEffect, createContext, useContext, Suspense } from 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from './theme.js';
 import { AuthProvider } from './context/AuthContext.js';
+import { LanguageProvider } from './context/LanguageContext.js';
 import { ProtectedRoute } from './routes/ProtectedRoute.js';
 import DashboardLayout from './components/layout/DashboardLayout.js';
 import { Loader2 } from 'lucide-react';
@@ -19,41 +20,10 @@ const AssistantPage = React.lazy(() => import('./pages/AssistantPage.js'));
 const ReportsPage = React.lazy(() => import('./pages/ReportsPage.js'));
 const ProfilePage = React.lazy(() => import('./pages/ProfilePage.js'));
 const SettingsPage = React.lazy(() => import('./pages/SettingsPage.js'));
+const NotificationsPage = React.lazy(() => import('./pages/NotificationsPage.js'));
 const NotFoundPage = React.lazy(() => import('./pages/NotFoundPage.js'));
 
-// Simple Context for language translation
-interface LanguageContextType {
-  lang: 'en' | 'hi';
-  toggleLang: () => void;
-}
-
-const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
-
-export const useLanguage = () => {
-  const context = useContext(LanguageContext);
-  if (!context) throw new Error('useLanguage must be used within LanguageProvider');
-  return context;
-};
-
-// ponytail: i18n context, keep local state for simple translation mapping
-export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [lang, setLang] = useState<'en' | 'hi'>('en');
-
-  const toggleLang = () => {
-    setLang((prev) => (prev === 'en' ? 'hi' : 'en'));
-  };
-
-  // Keep <html lang> in sync so SEO/accessibility reflect the active language.
-  useEffect(() => {
-    document.documentElement.lang = lang;
-  }, [lang]);
-
-  return (
-    <LanguageContext.Provider value={{ lang, toggleLang }}>
-      {children}
-    </LanguageContext.Provider>
-  );
-}
+// LanguageProvider is imported from ./context/LanguageContext.js
 
 // Loading Fallback for Suspense
 const PageLoader = () => (
@@ -86,6 +56,7 @@ function App() {
                     <Route path="/reports" element={<ReportsPage />} />
                     <Route path="/profile" element={<ProfilePage />} />
                     <Route path="/settings" element={<SettingsPage />} />
+                    <Route path="/notifications" element={<NotificationsPage />} />
                     
                     {/* Fallback 404 inside dashboard layout */}
                     <Route path="*" element={<NotFoundPage />} />

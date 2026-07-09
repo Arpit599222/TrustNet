@@ -15,7 +15,7 @@ import {
   Check, 
   Loader2
 } from 'lucide-react';
-import { useLanguage } from '../App.js';
+import { useLanguage } from '../context/LanguageContext.js';
 import { useAuth } from '../context/AuthContext.js';
 
 function SignupPage() {

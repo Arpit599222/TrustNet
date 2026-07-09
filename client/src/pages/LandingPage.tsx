@@ -22,7 +22,7 @@ import {
   X,
 } from 'lucide-react';
 import { useState } from 'react';
-import { useLanguage } from '../App.js';
+import { useLanguage } from '../context/LanguageContext.js';
 import { useAuth } from '../context/AuthContext.js';
 import ThemeToggle from '../components/ThemeToggle';
 import Scanner from '../components/Scanner';

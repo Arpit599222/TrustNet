@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { ShieldCheck, AlertTriangle, Users, Link2 } from 'lucide-react';
-import { useLanguage } from '../App';
+import { useLanguage } from '../context/LanguageContext.js';
 
 interface Stat {
   icon: typeof ShieldCheck;

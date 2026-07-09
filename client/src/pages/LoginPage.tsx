@@ -16,7 +16,7 @@ import {
   AlertOctagon,
   XCircle
 } from 'lucide-react';
-import { useLanguage } from '../App.js';
+import { useLanguage } from '../context/LanguageContext.js';
 import ThemeToggle from '../components/ThemeToggle.js';
 import { useAuth } from '../context/AuthContext.js';
 
