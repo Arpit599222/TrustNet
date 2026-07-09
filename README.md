@@ -1,312 +1,335 @@
-<<<<<<< HEAD
-<div align="center">
-  <img src="https://via.placeholder.com/150/050505/FFFFFF?text=TrustNet+AI" alt="TrustNet AI Logo" width="150" />
+::: {align="center"}
+# 🛡️ TrustNet AI
 
-  # TrustNet AI
+### **Building a Safer Digital Society with AI**
 
-  **Building a Safer Digital Society with AI**
+An AI-powered platform that helps users detect scams, phishing attacks,
+fake news, malicious websites, manipulated images, and online fraud
+through intelligent trust scoring.
 
-  *An intelligent platform designed to combat online scams, fake news, phishing attempts, and malicious websites using advanced AI analysis and trust scoring.*
+![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
+![Express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express)
+![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)
+![Gemini](https://img.shields.io/badge/Google-Gemini-4285F4?style=for-the-badge&logo=google)
+![Tailwind
+CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
-  <p align="center">
-    <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
-    <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
-    <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js" />
-    <img src="https://img.shields.io/badge/Express.js-404D59?style=for-the-badge" alt="Express" />
-    <img src="https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white" alt="Supabase" />
-    <img src="https://img.shields.io/badge/Gemini_AI-8E75B2?style=for-the-badge&logo=google&logoColor=white" alt="Gemini" />
-    <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind" />
-  </p>
-  
-  <p align="center">
-    <a href="https://github.com/Arpit599222/TrustNet/stargazers"><img src="https://img.shields.io/github/stars/Arpit599222/TrustNet?style=for-the-badge&color=yellow" alt="Stars" /></a>
-    <a href="https://github.com/Arpit599222/TrustNet/issues"><img src="https://img.shields.io/github/issues/Arpit599222/TrustNet?style=for-the-badge&color=red" alt="Issues" /></a>
-    <a href="https://github.com/Arpit599222/TrustNet/blob/main/LICENSE"><img src="https://img.shields.io/github/license/Arpit599222/TrustNet?style=for-the-badge&color=blue" alt="License" /></a>
-  </p>
-</div>
+[![Stars](https://img.shields.io/github/stars/Arpit599222/TrustNet?style=social)](https://github.com/Arpit599222/TrustNet)
+[![Forks](https://img.shields.io/github/forks/Arpit599222/TrustNet?style=social)](https://github.com/Arpit599222/TrustNet)
+[![Issues](https://img.shields.io/github/issues/Arpit599222/TrustNet)](https://github.com/Arpit599222/TrustNet/issues)
+:::
 
----
+------------------------------------------------------------------------
 
-## 🏆 Hackathon Project
+# 🏆 Hackathon Project
 
 **Track:** Responsible Digital Society 🌍
 
-TrustNet AI was developed as a solution to help people identify online scams, fake news, phishing attempts, and malicious websites using AI-powered analysis and trust scoring.
+TrustNet AI empowers users to verify digital content before trusting it.
 
----
+------------------------------------------------------------------------
 
-## 📖 About
+# 📖 About
 
-In today's hyper-connected world, digital threats are evolving faster than ever. Every day, millions of users fall victim to sophisticated attacks. TrustNet AI was built with a clear motivation: to protect users by providing an intelligent safety layer for the internet.
+Every day millions of people become victims of phishing attacks, fake
+news, scam messages, fake websites, deepfakes and online fraud.
 
-We are combating the increasing risks of:
-- 🎣 **Phishing:** Fraudulent attempts to obtain sensitive information.
-- 📰 **Fake News:** Misinformation campaigns designed to manipulate public opinion.
-- 📱 **Scam Messages:** Fraudulent SMS, WhatsApp, and email schemes.
-- 🎭 **Deepfakes:** Synthetic media used for deception and fraud.
-- 🌐 **Fraud Websites:** Fake e-commerce and banking clones.
-- 🔳 **QR Code Scams (Quishing):** Malicious QR codes leading to credential harvesting.
-- 👥 **Online Impersonation:** Fake profiles mimicking trusted authorities.
+TrustNet AI provides an intelligent Trust Score (0--100) with AI-powered
+explanations so users can make safer digital decisions.
 
-**TrustNet AI** empowers users to make safer digital decisions by acting as an intelligent co-pilot that scans, analyzes, and verifies digital content in real-time.
+------------------------------------------------------------------------
 
----
+# 🎯 Vision
 
-## ✨ Features
+To build a safer digital ecosystem where everyone can verify information
+before trusting it.
 
-- 🛡 **AI Scam Detector:** Instantly analyze texts and emails for malicious intent and psychological manipulation.
-- 🌐 **Website Trust Checker:** Deep-scan domains for SSL validity, domain age, and known threat signatures.
-- 📰 **Fake News Verification:** Cross-reference claims against trusted databases to combat misinformation.
-- 🖼 **Image Analysis:** Detect deepfakes and manipulated media using computer vision.
-- 🤖 **AI Safety Assistant:** An interactive conversational agent providing real-time security advice.
-- 📊 **Community Dashboard:** A crowdsourced threat intelligence feed alerting users to trending scams.
-- 📈 **Reports & Analytics:** Detailed scan history logs and personalized risk assessments.
-- 🔐 **Secure Authentication:** Robust multi-provider login system backed by enterprise-grade security.
+------------------------------------------------------------------------
 
----
+# ❗ Problem Statement
 
-## 💻 Tech Stack
+People face:
 
-### Frontend
-- **Framework:** React 19
-- **Language:** TypeScript
-- **Styling:** Tailwind CSS v4
-- **Animations:** Framer Motion
+-   🎣 Phishing Links
+-   💳 Payment Scams
+-   📰 Fake News
+-   🤖 AI Generated Deepfakes
+-   📞 Scam Calls & Messages
+-   🌐 Fake Websites
+-   🔳 QR Code Scams
+-   👤 Online Impersonation
 
-### Backend
-- **Runtime:** Node.js
-- **Framework:** Express.js
+Most users don't know whether digital content is trustworthy.
 
-### Database & Auth
-- **Database:** Supabase PostgreSQL
-- **Authentication:** Firebase Auth (Google) + Supabase Auth (Email/Password)
+------------------------------------------------------------------------
 
-### AI Integration
-- **LLM Engine:** Google Gemini Pro
+# 💡 Solution
 
-### Deployment
-- **Frontend:** Vercel *(Planned)*
-- **Backend:** Render *(Planned)*
+TrustNet AI analyzes digital content using AI and returns:
 
----
+-   Trust Score
+-   Risk Level
+-   AI Explanation
+-   Safety Recommendations
 
-## 🏗 Architecture
+Supported Inputs:
 
-```mermaid
-graph TD
-    Client[React Frontend] -->|REST API| Server[Express Backend]
-    Client -->|OAuth| Firebase[Firebase Auth]
-    Server -->|JWT Verification| Firebase
-    Server -->|SQL Queries| DB[(Supabase PostgreSQL)]
-    Server -->|Prompt Engineering| Gemini[Google Gemini API]
-    
-    subgraph Frontend Features
-        Dashboard
-        Scanner
-        Community
-        AIAssistant
-    end
-    
-    Frontend Features --> Client
+-   Website URL
+-   Messages
+-   Images
+-   News Articles
+-   Screenshots
+
+------------------------------------------------------------------------
+
+# ✨ Features
+
+-   🛡 AI Scam Detector
+-   🌐 Website Trust Checker
+-   📰 Fake News Verification
+-   🖼 Image Analysis
+-   🤖 AI Safety Assistant
+-   📊 Community Dashboard
+-   📈 Reports & Analytics
+-   🔐 Secure Authentication
+
+------------------------------------------------------------------------
+
+# 🛠 Tech Stack
+
+## Frontend
+
+-   React
+-   TypeScript
+-   Tailwind CSS
+-   Framer Motion
+
+## Backend
+
+-   Node.js
+-   Express.js
+
+## Database
+
+-   Supabase PostgreSQL
+
+## Authentication
+
+-   Supabase Auth
+
+## AI
+
+-   Google Gemini
+
+## Deployment
+
+-   Vercel
+-   Render
+
+------------------------------------------------------------------------
+
+# 🏗 Architecture
+
+``` mermaid
+graph LR
+User --> React
+React --> Express
+Express --> Supabase
+Express --> Gemini
+Supabase --> Database[(PostgreSQL)]
 ```
 
----
+------------------------------------------------------------------------
 
-## 📂 Folder Structure
+# 📂 Folder Structure
 
-```text
-TrustNet/
-├── client/                 # React Frontend
-│   ├── public/             # Static Assets
-│   ├── src/
-│   │   ├── components/     # Reusable UI Components
-│   │   ├── config/         # Firebase/Client Configs
-│   │   ├── context/        # React Context Providers (Auth, Theme)
-│   │   ├── pages/          # Application Views
-│   │   ├── utils/          # Helper Functions
-│   │   ├── App.tsx         # Main Routing Layer
-│   │   └── index.css       # Global Styles & Theme Tokens
-│   ├── package.json
-│   └── vite.config.ts
-├── server/                 # Express Backend
-│   ├── src/
-│   │   ├── config/         # Supabase/Server Configs
-│   │   ├── controllers/    # Route Logic (Auth, Scanner, etc.)
-│   │   ├── middleware/     # JWT Verification
-│   │   ├── routes/         # API Endpoints
-│   │   └── index.ts        # Server Entry Point
-│   ├── package.json
-│   └── tsconfig.json
+``` text
+TrustNet
+├── client
+│   ├── src
+│   ├── public
+│   └── package.json
+├── server
+│   ├── src
+│   ├── routes
+│   ├── controllers
+│   ├── middleware
+│   └── package.json
 ├── README.md
 └── .gitignore
 ```
 
----
+------------------------------------------------------------------------
 
-## 🚀 Installation
+# 🚀 Installation
 
-### 1. Clone the repository
-```bash
+``` bash
 git clone https://github.com/Arpit599222/TrustNet.git
 cd TrustNet
 ```
 
-### 2. Install dependencies
-Open two terminals. One for the client, one for the server.
+Install dependencies
 
-**Client:**
-```bash
+``` bash
 cd client
+npm install
+
+cd ../server
 npm install
 ```
 
-**Server:**
-```bash
-cd server
-npm install
-```
+Run Backend
 
-### 3. Environment Variables
-See the [Environment Variables](#-environment-variables) section below for required `.env` configurations.
-
-### 4. Run Development Servers
-
-**Start Backend (Server):**
-```bash
-cd server
+``` bash
 npm run dev
 ```
 
-**Start Frontend (Client):**
-```bash
-cd client
+Run Frontend
+
+``` bash
+cd ../client
 npm run dev
 ```
 
-### 5. Production Build
-```bash
-cd client
-npm run build
+------------------------------------------------------------------------
+
+# 🔐 Environment Variables
+
+## server/.env
+
+``` env
+PORT=
+SUPABASE_URL=
+SUPABASE_ANON_KEY=
+SUPABASE_SERVICE_ROLE_KEY=
+JWT_SECRET=
+GEMINI_API_KEY=
 ```
 
----
+## client/.env
 
-## 🔐 Environment Variables
-
-You will need to create `.env` files in both the `client` and `server` directories.
-
-### `server/.env`
-```env
-PORT=3000
-SUPABASE_URL=your_supabase_project_url
-SUPABASE_ANON_KEY=your_supabase_anon_key
-JWT_SECRET=your_secure_jwt_secret
-GEMINI_API_KEY=your_google_gemini_api_key
-```
-
-### `client/.env`
-```env
+``` env
 VITE_API_URL=http://localhost:3000/api
 ```
-*(Firebase configuration is injected securely via the client config.)*
 
----
+------------------------------------------------------------------------
 
-## 📸 Screenshots
+# 📸 Screenshots
 
-| Landing Page | Authentication |
-| :---: | :---: |
-| <img src="https://via.placeholder.com/400x250/050505/FFFFFF?text=Landing+Page" alt="Landing Page" /> | <img src="https://via.placeholder.com/400x250/050505/FFFFFF?text=Authentication" alt="Authentication" /> |
+Replace these placeholders with project screenshots.
 
-| Dashboard | Scanner |
-| :---: | :---: |
-| <img src="https://via.placeholder.com/400x250/050505/FFFFFF?text=Dashboard" alt="Dashboard" /> | <img src="https://via.placeholder.com/400x250/050505/FFFFFF?text=Scanner" alt="Scanner" /> |
+-   Landing Page
+-   Login
+-   Dashboard
+-   Scanner
+-   AI Assistant
+-   Community
+-   Reports
 
-| AI Assistant | Community Feed |
-| :---: | :---: |
-| <img src="https://via.placeholder.com/400x250/050505/FFFFFF?text=AI+Assistant" alt="AI Assistant" /> | <img src="https://via.placeholder.com/400x250/050505/FFFFFF?text=Community" alt="Community" /> |
+------------------------------------------------------------------------
 
-| Reports |
-| :---: |
-| <img src="https://via.placeholder.com/400x250/050505/FFFFFF?text=Reports" alt="Reports" /> |
+# 📊 Project Status
 
----
+  Module           Status
+  ---------------- --------
+  Authentication   ✅
+  Dashboard        ✅
+  Routing          ✅
+  Scanner          🚧
+  AI Assistant     🚧
+  Reports          🚧
+  Community        🚧
 
-## 🗺 Roadmap
+------------------------------------------------------------------------
 
-- [x] Initial Repository Setup
-- [x] UI/UX Prototyping (Matte Black Theme)
-- [x] Supabase Database Integration
-- [x] Firebase Google Authentication
-- [x] Gemini AI Scanner Logic
-- [ ] Connect Live Community Feed
-- [ ] Implement Report PDF Exports
-- [ ] Add Localization Support
+# 🗺 Roadmap
 
----
+-   [x] Authentication
+-   [x] Dashboard UI
+-   [x] Responsive Design
+-   [ ] Website Scanner
+-   [ ] Fake News Detection
+-   [ ] Image Analysis
+-   [ ] AI Chat
+-   [ ] Community Feed
+-   [ ] Report Export
 
-## 🔮 Future Features
+------------------------------------------------------------------------
 
-- 🧩 **Chrome Extension:** Real-time browsing protection.
-- 🛡 **Browser Protection:** Intercept malicious downloads natively.
-- 📱 **Mobile App:** iOS and Android native clients.
-- 🎙 **AI Voice Assistant:** Detect deepfake audio and scam calls.
-- 🔌 **Threat Intelligence API:** Open API for other developers to consume our trust scores.
-- ⏱ **Real-time Monitoring:** Webhook alerts for emerging threats.
+# 🔮 Future Scope
 
----
+-   Chrome Extension
+-   Mobile Application
+-   Browser Protection
+-   Voice Scam Detection
+-   Threat Intelligence API
+-   Multi-language Support
 
-## 🔒 Security
+------------------------------------------------------------------------
 
-At TrustNet AI, security is our primary product and core philosophy.
-- **Secure Authentication:** Passwords are mathematically hashed using Bcrypt. OAuth tokens are verified securely on the backend before any session is granted.
-- **Data Privacy:** We minimize data collection. Scan histories are encrypted at rest using Supabase's AES-256 encryption.
-- **Encryption:** All transit data is strictly enforced over TLS/HTTPS. Internal microservices communicate over secure VPC networking.
+# 🔒 Security
 
----
+-   Secure Authentication
+-   Password Hashing
+-   HTTPS Communication
+-   Input Validation
+-   JWT/Supabase Session Security
+-   Protected Routes
 
-## 🤝 Contributing
+------------------------------------------------------------------------
 
-We welcome contributions from the open-source community!
+# 🤝 Contributing
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+1.  Fork the repository
+2.  Create a feature branch
+3.  Commit your changes
+4.  Push your branch
+5.  Open a Pull Request
 
-Please read our `CONTRIBUTING.md` (coming soon) for detailed guidelines.
+------------------------------------------------------------------------
 
----
+# 👥 Core Contributors
 
-## 👥 Core Contributors
+  -----------------------------------------------------------------------
+  Name                                Role
+  ----------------------------------- -----------------------------------
+  **Arpit Raj**                       Full Stack Development, Backend, AI
+                                      Integration, Architecture
 
-Made with ❤️ by an incredible team dedicated to internet safety:
+  **Khushi Verma**                    UI/UX Design, Frontend Development
 
-| <a href="https://github.com/"><img src="https://via.placeholder.com/100/050505/FFFFFF?text=KV" width="100" style="border-radius:50%;"/><br/><b>Khushi Verma</b></a> | <a href="https://github.com/"><img src="https://via.placeholder.com/100/050505/FFFFFF?text=AR" width="100" style="border-radius:50%;"/><br/><b>Arpit Raj</b></a> | <a href="https://github.com/"><img src="https://via.placeholder.com/100/050505/FFFFFF?text=IG" width="100" style="border-radius:50%;"/><br/><b>Ishani Gupta</b></a> |
-| :---: | :---: | :---: |
+  **Ishani Gupta**                    Research, Testing, Documentation
+  -----------------------------------------------------------------------
 
----
+------------------------------------------------------------------------
 
-## 🙏 Acknowledgements
+# 🙏 Acknowledgements
 
-- **[React](https://reactjs.org/)** for the incredible UI library.
-- **[Supabase](https://supabase.com/)** for the open-source Firebase alternative.
-- **[Google Gemini](https://deepmind.google/technologies/gemini/)** for the state-of-the-art LLM capabilities.
-- **[Open Source Community](https://github.com/)** for continuous inspiration and support.
+-   React
+-   Tailwind CSS
+-   Supabase
+-   Google Gemini
+-   Express.js
+-   Open Source Community
 
----
+------------------------------------------------------------------------
 
-## 📄 License
+# 📄 License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Licensed under the MIT License.
 
----
+------------------------------------------------------------------------
 
-<div align="center">
-  <p>⭐ If you like this project, please consider giving it a star.</p>
-  <b>Building a Safer Digital Society with AI.</b>
-</div>
-=======
-# TrustNet
->>>>>>> 93c35415c2f03986a522e9e2f23741b9f13e5ec9
+::: {align="center"}
+## ❤️ Built with Passion for a Safer Internet
+
+**Made with ❤️ by**
+
+### Khushi Verma • Arpit Raj • Ishani Gupta
+
+⭐ If you like this project, don't forget to star the repository.
+
+**Building a Safer Digital Society with AI**
+:::

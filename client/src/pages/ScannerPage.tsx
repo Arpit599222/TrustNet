@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { motion } from 'framer-motion';
 import { Scan, Link as LinkIcon, MessageSquare, Newspaper, Image as ImageIcon } from 'lucide-react';
 

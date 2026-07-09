@@ -1,6 +1,6 @@
-import React from 'react';
+
 import { motion } from 'framer-motion';
-import { ShieldCheck, ArrowRight, Scan, ShieldAlert, CheckCircle, Activity, Globe } from 'lucide-react';
+import { ShieldCheck, Scan, ShieldAlert, Activity, Globe } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function DashboardPage() {

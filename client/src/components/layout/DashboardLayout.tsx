@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { NavLink, Outlet, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext.js';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -13,8 +13,7 @@ import {
   Settings, 
   Bell, 
   LogOut,
-  Menu,
-  X
+  Menu
 } from 'lucide-react';
 import ThemeToggle from '../ThemeToggle.js';
 

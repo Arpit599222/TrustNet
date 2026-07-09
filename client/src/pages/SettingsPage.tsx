@@ -1,6 +1,6 @@
-import React from 'react';
+
 import { motion } from 'framer-motion';
-import { Settings, Bell, Lock, Globe } from 'lucide-react';
+import { Settings, Bell, Lock } from 'lucide-react';
 
 export default function SettingsPage() {
   return (
