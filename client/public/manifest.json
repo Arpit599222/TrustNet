@@ -1,0 +1,21 @@
+{
+  "name": "TrustNet",
+  "short_name": "TrustNet",
+  "description": "Verify links, SMS, and news before you click. Digital trust platform for India.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#07080B",
+  "theme_color": "#1E3A8A",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["security", "utilities"],
+  "lang": "en",
+  "dir": "ltr"
+}
