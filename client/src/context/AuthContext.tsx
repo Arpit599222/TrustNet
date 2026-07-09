@@ -31,8 +31,13 @@ export const useAuth = () => {
 // import { auth, googleProvider } from '../config/firebase.js';
 
 export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [user, setUser] = useState<User | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [user, setUser] = useState<User | null>({
+    id: 'mock-id',
+    name: 'UI Prototype User',
+    email: 'prototype@trustnet.local',
+    createdAt: new Date().toISOString()
+  });
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   // Clear global context errors
