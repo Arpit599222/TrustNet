@@ -9,8 +9,8 @@ import { Loader2 } from 'lucide-react';
 
 // Eagerly loaded public pages
 import LandingPage from './pages/LandingPage.js';
-import LoginPage from './pages/LoginPage.js';
-import SignupPage from './pages/SignupPage.js';
+// import LoginPage from './pages/LoginPage.js';
+// import SignupPage from './pages/SignupPage.js';
 
 // Lazy loaded protected pages
 const DashboardPage = React.lazy(() => import('./pages/DashboardPage.js'));
