@@ -61,8 +61,12 @@ app.use((err: any, _req: express.Request, res: express.Response, _next: express.
   res.status(500).json({ success: false, error: 'Something went wrong on the server.' });
 });
 
-// Start listening
-app.listen(PORT, () => {
-  console.log(`TrustNet Server running in local mode on port ${PORT}`);
-  console.log(`Accepting CORS requests from: ${CLIENT_URL}`);
-});
+// Start listening if not in a serverless environment
+if (process.env.NODE_ENV !== 'production' && !process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`TrustNet Server running in local mode on port ${PORT}`);
+    console.log(`Accepting CORS requests from: ${CLIENT_URL}`);
+  });
+}
+
+export default app;
